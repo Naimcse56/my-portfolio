@@ -47,6 +47,15 @@
                         <li class="nav-item">
                            <a class="nav-link" href="#mh-contact">Contact</a>
                         </li>
+                        @auth
+                            <li class="nav-item">
+                                <a class="nav-link" style="color: #0bceaf" href="{{ route('home') }}">Dashboard</a>
+                            </li>
+                        @else
+                            <li class="nav-item">
+                                <a class="nav-link" style="color: #0bceaf" href="{{ route('login') }}">Login</a>
+                            </li>
+                        @endauth
                     </ul>
                 </div>
             </nav>
