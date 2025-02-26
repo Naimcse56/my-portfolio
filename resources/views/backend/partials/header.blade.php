@@ -46,10 +46,10 @@
                       <hr class="dropdown-divider">
                    </li>
                    <li>
-                      <a class="dropdown-item" href="pages-user-profile.html">
+                      <a class="dropdown-item" href="{{route('password_settings')}}">
                          <div class="d-flex align-items-center">
                             <div class="setting-icon"><i class="bi bi-person-fill"></i></div>
-                            <div class="setting-text ms-3"><span>Profile</span></div>
+                            <div class="setting-text ms-3"><span>Password Settings</span></div>
                          </div>
                       </a>
                    </li>

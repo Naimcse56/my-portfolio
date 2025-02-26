@@ -27,12 +27,15 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>{{ config('app.name', 'Portolio') }}</title>
+  @stack('styles')
 </head>
 
 <body>
     @include('backend.partials.header')
     @include('backend.partials.sidebar')
-    @yield('content')
+    <main class="page-content">
+      @yield('content')
+    </main>
     <!-- Bootstrap bundle JS -->
     <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
     <!--plugins-->
@@ -43,7 +46,7 @@
     <script src="{{asset('plugins/apexcharts-bundle/js/apexcharts.min.js')}}"></script>
     <!--app-->
     <script src="{{asset('js/app.js')}}"></script>
-    <script src="{{asset('js/index4.js')}}"></script>
+    @stack('scripts')
   
   </body>
   
