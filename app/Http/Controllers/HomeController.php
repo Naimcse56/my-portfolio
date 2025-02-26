@@ -20,9 +20,14 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function main_home()
     {
         return view('home');
+    }
+
+    public function index()
+    {
+        return view('backend.home');
     }
 
     public function password_settings()

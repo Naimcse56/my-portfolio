@@ -3,10 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(HomeController::class)->group(function () {
+    Route::get('/', 'main_home')->name('main_home');
 });
-
 Auth::routes();
 
 Route::group(['prefix' => 'admin','middleware' => ['auth']], function () {
