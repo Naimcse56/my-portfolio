@@ -37,6 +37,30 @@ class HomeController extends Controller
         return view('backend.profile.password_settings', $data);
     }
 
+    public function avatar_settings()
+    {
+        $data['user'] = auth()->user();
+        return view('backend.profile.avatar_settings', $data);
+    }
+
+    public function contact_settings()
+    {
+        $data['user'] = auth()->user();
+        return view('backend.profile.contact_settings', $data);
+    }
+
+    public function cv_settings()
+    {
+        $data['user'] = auth()->user();
+        return view('backend.profile.cv_settings', $data);
+    }
+
+    public function about_settings()
+    {
+        $data['user'] = auth()->user();
+        return view('backend.profile.about_settings', $data);
+    }
+
     public function password_update(Request $request)
     {
         $user = auth()->user();

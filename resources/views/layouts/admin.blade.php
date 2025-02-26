@@ -33,11 +33,13 @@
 </head>
 
 <body>
+  <div class="wrapper">
     @include('backend.partials.header')
     @include('backend.partials.sidebar')
     <main class="page-content">
       @yield('content')
     </main>
+  </div>
     <!-- Bootstrap bundle JS -->
     <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
     <!--plugins-->

@@ -25,6 +25,9 @@ return new class extends Migration
             $table->string('phone',20)->nullable();
             $table->text('about_self')->nullable();
             $table->string('cv_path',255)->nullable();
+            $table->string('whatsapp_phone',20)->nullable();
+            $table->string('github',255)->nullable();
+            $table->string('facebook',255)->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

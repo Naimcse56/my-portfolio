@@ -34,11 +34,11 @@
                       <h5 class="mb-0">Personal</h5>
                    </div>
                 </div>
-                <a href="app-emailbox.html" class="list-group-item"><i class="bi bi-envelope"></i>Update Avatar</a>
-                <a href="app-chat-box.html" class="list-group-item"><i class="bi bi-chat-left-text"></i>Contact Info</a>
-                <a href="app-file-manager.html" class="list-group-item"><i class="bi bi-archive"></i>CV</a>
-                <a href="app-to-do.html" class="list-group-item"><i class="bi bi-check2-square"></i>About</a>
-                <a href="app-invoice.html" class="list-group-item"><i class="bi bi-receipt"></i>Skill</a>
+                <a href="{{route('avatar_settings')}}" class="list-group-item"><i class="bi bi-envelope"></i>Update Avatar</a>
+                <a href="{{route('contact_settings')}}" class="list-group-item"><i class="bi bi-chat-left-text"></i>Contact Info</a>
+                <a href="{{route('cv_settings')}}" class="list-group-item"><i class="bi bi-archive"></i>CV</a>
+                <a href="{{route('about_settings')}}" class="list-group-item"><i class="bi bi-check2-square"></i>About</a>
+                <a href="{{route('home')}}" class="list-group-item"><i class="bi bi-receipt"></i>Skills</a>
              </div>
           </div>
        </div>
