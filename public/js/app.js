@@ -18,10 +18,10 @@ $(function() {
 			o.is("a");)
 			
 			o = o.parent("").parent("").addClass("active show");
-			console.log(o[0].id.toString())
-			var tab = "#" + o[0].id.toString()
-			$("[data-bs-target='" + tab + "']").addClass('active')
-			
+			if (typeof o[0] !== "undefined") {
+				var tab = "#" + o[0].id.toString()
+				$("[data-bs-target='" + tab + "']").addClass('active')
+			}
 		}); 
 
 
@@ -125,10 +125,6 @@ $(function() {
 
 	new PerfectScrollbar(".iconmenu")
     new PerfectScrollbar(".textmenu")
-
-
-	new PerfectScrollbar(".header-message-list")
-    new PerfectScrollbar(".header-notifications-list")
 
 
 
