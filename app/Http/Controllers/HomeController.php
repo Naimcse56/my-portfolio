@@ -22,7 +22,8 @@ class HomeController extends Controller
      */
     public function main_home()
     {
-        return view('home');
+        $data['user'] = User::first();
+        return view('home', $data);
     }
 
     public function index()

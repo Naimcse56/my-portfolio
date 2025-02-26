@@ -49,11 +49,11 @@
                         </li>
                         @auth
                             <li class="nav-item">
-                                <a class="nav-link" style="color: #0bceaf" href="{{ route('home') }}">Dashboard</a>
+                                <a class="nav-link" style="color: #ffa500" href="{{ route('home') }}">Dashboard</a>
                             </li>
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" style="color: #0bceaf" href="{{ route('login') }}">Login</a>
+                                <a class="nav-link" style="color: #ffa500" href="{{ route('login') }}">Login</a>
                             </li>
                         @endauth
                     </ul>

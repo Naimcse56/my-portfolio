@@ -9,9 +9,7 @@
             <div class="col-sm-12 col-md-6">
                 <div class="mh-about-inner">
                     <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">About Me</h2>
-                    <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Hello, I’m a Patrick, web-developer based on Paris. 
-                    I have rich experience in web site design & building 
-                    and customization. Also I am good at</p>
+                    <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">{{ $user->about_self }}</p>
                     <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                         <ul>
                             <li><span>php</span></li>

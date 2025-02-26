@@ -348,7 +348,7 @@ a:focus {
 }
 
 .btn.btn-fill {
-  background-color: #0bceaf;
+  background-color: #ffa500;
   color: #fff;
 }
 
@@ -866,7 +866,7 @@ button:focus {
 
 .white-vertion .page-item.active .page-link {
   background-color: #fff;
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .white-vertion .page-item .page-link {
@@ -1127,7 +1127,7 @@ button:focus {
 .dark-vertion .page-item.active .page-link {
   background-color: #fff;
   border-color: #fff;
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .dark-vertion .navbar-toggler .icon,
@@ -1407,7 +1407,7 @@ li .fa {
 }
 
 .mh-header .navbar-nav li a:hover {
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .nav-3 .navbar-dark .navbar-nav .nav-link a {
@@ -1484,7 +1484,7 @@ li .fa {
 }
 
 .mh-home-2 .mh-header-info ul.mh-home-contact li:hover .fa {
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .mh-home-2 .mh-header-info .mh-about-tag {
@@ -1510,7 +1510,7 @@ li .fa {
 }
 
 .mh-home .mh-header-info .mh-promo span {
-  background-color: #0bceaf;
+  background-color: #ffa500;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 1px;
@@ -1554,7 +1554,7 @@ li .fa {
 }
 
 .mh-home .mh-header-info ul li:hover .fa {
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .mh-home .mh-header-info .social-icon {
@@ -1659,7 +1659,7 @@ li .fa {
 }
 
 .mh-about-tag ul li span {
-  border: 1px solid #0bceaf;
+  border: 1px solid #ffa500;
   padding: 4px 10px;
   border-radius: 4px;
 }
@@ -1741,7 +1741,7 @@ li .fa {
 }
 
 .mh-progress path:nth-child(2) {
-  stroke: #0bceaf;
+  stroke: #ffa500;
 }
 
 .candidatos {
@@ -1799,7 +1799,7 @@ li .fa {
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  background: #0bceaf;
+  background: #ffa500;
   -webkit-transition: 3s all;
   -webkit-animation-duration: 3s;
   -webkit-animation-name: animationProgress;
@@ -1861,12 +1861,12 @@ li .fa {
 .mh-experince .mh-education-deatils .mh-education-item h4 a {
   font-style: italic;
   margin-left: 4px;
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .mh-experince .mh-education-deatils .mh-education-item .mh-eduyear {
   margin: 10px 0;
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .mh-experince .mh-education-deatils .mh-education-item p {
@@ -1914,12 +1914,12 @@ li .fa {
 }
 
 .mh-work .mh-experience-deatils .mh-work-item h4 a {
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .mh-work .mh-experience-deatils .mh-work-item .mh-eduyear {
   margin: 10px 0;
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .mh-work .mh-experience-deatils .mh-work-item span {
@@ -1962,11 +1962,11 @@ li .fa {
 }
 
 .portfolio-nav ul li:hover {
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .portfolio-nav ul li.active {
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .mh-portfolio-modal {
@@ -2051,7 +2051,7 @@ li .fa {
 .mh-pricing .mh-pricing h5 {
   font-size: 36px;
   line-height: 40px;
-  color: #0bceaf;
+  color: #ffa500;
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -2104,7 +2104,7 @@ li .fa {
 }
 
 .mh-blog .mh-blog-item .blog-inner a {
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .mh-blog .mh-blog-item img {
@@ -2120,7 +2120,7 @@ li .fa {
 }
 
 .mh-blog .mh-blog-item h2 a {
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .mh-blog .mh-blog-item h2 a:hover {
@@ -2231,7 +2231,7 @@ li .fa {
   width: inherit;
   float: none;
   margin: 0 auto;
-  border: 5px solid #0bceaf;
+  border: 5px solid #ffa500;
   margin: 0 auto;
   margin-bottom: 20px;
   border-radius: 50%;
@@ -2282,14 +2282,14 @@ li .fa {
 .mh-testimonial .owl-controls .owl-dots .owl-dot {
   height: 15px;
   width: 15px;
-  border: 1px solid #0bceaf;
+  border: 1px solid #ffa500;
   display: inline-block;
   border-radius: 50%;
   margin-right: 10px;
 }
 
 .mh-testimonial .owl-controls .owl-dots .owl-dot.active {
-  background-color: #0bceaf;
+  background-color: #ffa500;
 }
 
 /*
@@ -2391,7 +2391,7 @@ li .fa {
   border-radius: 50%;
   line-height: 100px;
   font-size: 20px;
-  border-color: #0bceaf;
+  border-color: #ffa500;
 }
 
 /*
@@ -2530,7 +2530,7 @@ li .fa {
   z-index: 990;
   margin-top: 0px;
   padding: 0;
-  background-color: #0bceaf;
+  background-color: #ffa500;
   transform: translateX(-100%) translateY(0) translateZ(0) rotate(0deg) scale(1);
   -o-transform: translateX(-100%) translateY(0) translateZ(0) rotate(0deg) scale(1);
   -ms-transform: translateX(-100%) translateY(0) translateZ(0) rotate(0deg) scale(1);
@@ -2663,7 +2663,7 @@ li .fa {
 }
 
 .old .navbar-header .navbar-toggler .icon-bar {
-  background-color: #0bceaf;
+  background-color: #ffa500;
   -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
   -webkit-font-smoothing: antialiased;
@@ -2700,7 +2700,7 @@ li .fa {
   z-index: 990;
   margin-top: 0px;
   padding: 0;
-  background-color: #0bceaf;
+  background-color: #ffa500;
   transform: translateX(-100%) translateY(0) translateZ(0) rotate(0deg) scale(1);
   -o-transform: translateX(-100%) translateY(0) translateZ(0) rotate(0deg) scale(1);
   -ms-transform: translateX(-100%) translateY(0) translateZ(0) rotate(0deg) scale(1);
@@ -2794,7 +2794,7 @@ li .fa {
   z-index: 990;
   margin-top: 0px;
   padding: 0;
-  background-color: #0bceaf;
+  background-color: #ffa500;
   transform: translateX(-100%) translateY(0) translateZ(0) rotate(0deg) scale(1);
   -o-transform: translateX(-100%) translateY(0) translateZ(0) rotate(0deg) scale(1);
   -ms-transform: translateX(-100%) translateY(0) translateZ(0) rotate(0deg) scale(1);
@@ -2927,7 +2927,7 @@ li .fa {
 }
 
 .new .navbar-header .navbar-toggler .icon-bar {
-  background-color: #0bceaf;
+  background-color: #ffa500;
   -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
   -webkit-font-smoothing: antialiased;
@@ -2964,7 +2964,7 @@ li .fa {
   z-index: 990;
   margin-top: 0px;
   padding: 0;
-  background-color: #0bceaf;
+  background-color: #ffa500;
   transform: translateX(-100%) translateY(0) translateZ(0) rotate(0deg) scale(1);
   -o-transform: translateX(-100%) translateY(0) translateZ(0) rotate(0deg) scale(1);
   -ms-transform: translateX(-100%) translateY(0) translateZ(0) rotate(0deg) scale(1);
@@ -3063,7 +3063,7 @@ li .fa {
 }
 
 .portfolio-nav ul li.current span {
-  border-bottom: 2px solid #0bceaf;
+  border-bottom: 2px solid #ffa500;
 }
 
 .mh-project-gallery .grid-item figure {
@@ -3272,7 +3272,7 @@ li .fa {
 
 .mh-featured-project .mh-featured-item .mh-featured-project-content .project-category {
   font-size: 14px;
-  color: #0bceaf;
+  color: #ffa500;
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 600;
@@ -3336,14 +3336,14 @@ li .fa {
 .mh-single-project-slide .owl-controls .owl-dots .owl-dot {
   height: 15px;
   width: 15px;
-  border: 1px solid #0bceaf;
+  border: 1px solid #ffa500;
   display: inline-block;
   border-radius: 50%;
   margin-right: 10px;
 }
 
 .mh-single-project-slide .owl-controls .owl-dots .owl-dot.active {
-  background-color: #0bceaf;
+  background-color: #ffa500;
 }
 
 .mh-single-project-slide-by-side .owl-next {
@@ -3417,7 +3417,7 @@ li .fa {
 }
 
 .mh-service .mh-service-item a {
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .mh-service .mh-service-item a .fa {
@@ -3452,7 +3452,7 @@ BLOG Pagination
 }
 
 .mh-pagination .page-link:hover {
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .mh-pagination .page-item:last-child .page-link {
@@ -3524,7 +3524,7 @@ BLOG Pagination
 }
 
 .mh-author-info .social-icon li a:hover {
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .mh-blog-category h4 {
@@ -3538,7 +3538,7 @@ BLOG Pagination
 }
 
 .mh-blog-category ul li a:hover {
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .mh-blog-insta ul li {
@@ -3585,7 +3585,7 @@ BLOG Pagination
 }
 
 .mh-blog-next-prev-post a {
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .mh-blog-next-prev-post a .fa {
@@ -3625,7 +3625,7 @@ BLOG Pagination
 }
 
 .comment-deatils span {
-  color: #0bceaf;
+  color: #ffa500;
 }
 
 .single-comment {
