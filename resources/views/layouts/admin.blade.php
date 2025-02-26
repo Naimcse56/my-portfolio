@@ -4,6 +4,11 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+
+  <title>{{ config('app.name', 'Portolio') }}</title>
+
   <link rel="icon" href="{{asset('images/favicon-32x32.png')}}" type="image/png" />
   <!--plugins-->
   <link href="{{asset('plugins/simplebar/css/simplebar.css')}}" rel="stylesheet" />
@@ -14,7 +19,7 @@
   <link href="{{asset('css/style.css')}}" rel="stylesheet" />
   <link href="{{asset('css/icons.css')}}" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&amp;display=swap" rel="stylesheet">
-<link href="{{asset('css/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{asset('css/bootstrap-icons.css')}}" rel="stylesheet">
 
   <!-- loader-->
 	<link href="{{asset('css/pace.min.css')}}" rel="stylesheet" />
@@ -23,10 +28,7 @@
   <!--Theme Styles-->
   <link href="{{asset('css/dark-theme.css')}}" rel="stylesheet" />
   <link href="{{asset('css/header-colors.css')}}" rel="stylesheet" />
-
-  <meta name="csrf-token" content="{{ csrf_token() }}">
-
-  <title>{{ config('app.name', 'Portolio') }}</title>
+  <link href="{{asset('css/toastr.min.css')}}" rel="stylesheet" type="text/css" />
   @stack('styles')
 </head>
 
@@ -46,7 +48,9 @@
     <script src="{{asset('plugins/apexcharts-bundle/js/apexcharts.min.js')}}"></script>
     <!--app-->
     <script src="{{asset('js/app.js')}}"></script>
+    <script src="{{asset('js/toastr.min.js')}}"></script>
     @stack('scripts')
+    @include('backend.partials.session_message')
   
   </body>
   

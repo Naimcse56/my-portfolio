@@ -24,7 +24,7 @@
                       <h5 class="mb-0">Dashboards</h5>
                    </div>
                 </div>
-                <a href="index4.html" class="list-group-item"><i class="bi bi-archive"></i>Project Management</a>
+                <a href="{{route('home')}}" class="list-group-item"><i class="bi bi-archive"></i>Project Management</a>
              </div>
           </div>
           <div class="tab-pane fade" id="pills-application">
