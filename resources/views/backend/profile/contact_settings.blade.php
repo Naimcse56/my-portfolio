@@ -27,15 +27,19 @@
                     </div>
                     <div class="col-12">
                         <label class="form-label">Whatsapp Phone</label>
-                        <input class="form-control" type="text" id="whatsapp_phone" name="whatsapp_phone" value="{{$user->whatsapp_phone}}" required>
+                        <input class="form-control" type="text" id="whatsapp_phone" name="whatsapp_phone" value="{{$user->whatsapp_phone}}">
                     </div>
                     <div class="col-12">
                         <label class="form-label">Facebook Link</label>
-                        <input class="form-control" type="text" id="facebook" name="facebook" value="{{$user->facebook}}" required>
+                        <input class="form-control" type="text" id="facebook" name="facebook" value="{{$user->facebook}}">
                     </div>
                     <div class="col-12">
                         <label class="form-label">Github Link</label>
-                        <input class="form-control" type="text" id="github" name="github" value="{{$user->github}}" required>
+                        <input class="form-control" type="text" id="github" name="github" value="{{$user->github}}">
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">LinkdIn Link</label>
+                        <input class="form-control" type="text" id="linkd_in" name="linkd_in" value="{{$user->linkd_in}}">
                     </div>
                     <div class="col-12">
                         <label class="form-label">Addess</label>

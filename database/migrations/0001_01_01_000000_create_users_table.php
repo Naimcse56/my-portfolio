@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('whatsapp_phone',20)->nullable();
             $table->string('github',255)->nullable();
             $table->string('facebook',255)->nullable();
+            $table->string('linkd_in',255)->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

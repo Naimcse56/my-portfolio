@@ -84,4 +84,56 @@ class HomeController extends Controller
             return back()->with('error', 'Current Password is not matching.');
         }
     }
+
+    public function avatar_update(Request $request)
+    {
+        $user = auth()->user();
+        $request->validate([
+            'files' => 'required',
+        ]);
+
+        $user->avatar = $avatar;
+        $user->save();
+        
+        return back()->with('success', 'updated successfully.');
+    }
+
+    public function contact_update(Request $request)
+    {
+        auth()->user()->update([
+            'phone' => $request->phone,
+            'whatsapp_phone' => $request->whatsapp_phone,
+            'facebook' => $request->facebook,
+            'github' => $request->github,
+            'address' => $request->address,
+            'linkd_in' => $request->linkd_in,
+        ]);
+        
+        return back()->with('success', 'updated successfully.');
+    }
+
+    public function cv_update(Request $request)
+    {
+        $user = auth()->user();
+        $request->validate([
+            'files' => 'required',
+        ]);
+
+        $user->cv_path = $cv_path;
+        $user->save();
+        
+        return back()->with('success', 'updated successfully.');
+    }
+
+    public function about_update(Request $request)
+    {
+        $request->validate([
+            'about_self' => 'required|string',
+        ]);
+        auth()->user()->update([
+            'about_self' => $request->about_self,
+        ]);
+        
+        return back()->with('success', 'updated successfully.');
+    }
 }
