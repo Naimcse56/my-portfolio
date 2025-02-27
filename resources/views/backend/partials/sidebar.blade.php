@@ -38,7 +38,7 @@
                 <a href="{{route('contact_settings')}}" class="list-group-item"><i class="bi bi-person-square"></i>Contact Info</a>
                 <a href="{{route('cv_settings')}}" class="list-group-item"><i class="bi bi-person-square"></i>CV</a>
                 <a href="{{route('about_settings')}}" class="list-group-item"><i class="bi bi-person-square"></i>About</a>
-                <a href="{{route('home')}}" class="list-group-item"><i class="bi bi-person-square"></i>Skills</a>
+                <a href="{{route('skills.index')}}" class="list-group-item"><i class="bi bi-person-square"></i>Skills</a>
              </div>
           </div>
        </div>
