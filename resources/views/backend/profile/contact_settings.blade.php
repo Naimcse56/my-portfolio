@@ -22,6 +22,10 @@
                <form class="row g-3" method="POST" action="{{ route('contact_update') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="col-12">
+                        <label class="form-label">Your Name</label>
+                        <input class="form-control" type="text" id="name" name="name" value="{{$user->name}}" required>
+                    </div>
+                    <div class="col-12">
                         <label class="form-label">Phone</label>
                         <input class="form-control" type="text" id="phone" name="phone" value="{{$user->phone}}" required>
                     </div>

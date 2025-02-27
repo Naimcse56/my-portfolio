@@ -26,7 +26,7 @@
              <li class="nav-item dropdown dropdown-large">
                 <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
                    <div class="user-setting d-flex align-items-center gap-1">
-                      <img src="{{asset('images/avatars/avatar-1.png')}}" class="user-img" alt="">
+                      <img src="{{Auth::user()->avatar ? asset(Auth::user()->avatar) : asset('images/avatars/avatar-1.png')}}" class="user-img" alt="">
                       <div class="user-name d-none d-sm-block">{{ Auth::user()->name }}</div>
                    </div>
                 </a>

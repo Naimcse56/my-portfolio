@@ -4,10 +4,10 @@
           <div class="nav-toggle-icon"><i class="bi bi-list"></i></div>
        </div>
        <ul class="nav nav-pills flex-column">
-          <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Dashboards">
+          <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Dashboard">
              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-dashboards" type="button"><i class="bi bi-house-door-fill"></i></button>
           </li>
-          <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Application">
+          <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Personal Information">
              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-application" type="button"><i class="bi bi-grid-fill"></i></button>
           </li>
        </ul>
@@ -24,7 +24,7 @@
                       <h5 class="mb-0">Dashboards</h5>
                    </div>
                 </div>
-                <a href="{{route('home')}}" class="list-group-item"><i class="bi bi-archive"></i>Project Management</a>
+                <a href="{{route('home')}}" class="list-group-item"><i class="bi bi-archive"></i>Dashboard</a>
              </div>
           </div>
           <div class="tab-pane fade" id="pills-application">
@@ -34,11 +34,11 @@
                       <h5 class="mb-0">Personal</h5>
                    </div>
                 </div>
-                <a href="{{route('avatar_settings')}}" class="list-group-item"><i class="bi bi-envelope"></i>Update Avatar</a>
-                <a href="{{route('contact_settings')}}" class="list-group-item"><i class="bi bi-chat-left-text"></i>Contact Info</a>
-                <a href="{{route('cv_settings')}}" class="list-group-item"><i class="bi bi-archive"></i>CV</a>
-                <a href="{{route('about_settings')}}" class="list-group-item"><i class="bi bi-check2-square"></i>About</a>
-                <a href="{{route('home')}}" class="list-group-item"><i class="bi bi-receipt"></i>Skills</a>
+                <a href="{{route('avatar_settings')}}" class="list-group-item"><i class="bi bi-person-square"></i>Update Avatar</a>
+                <a href="{{route('contact_settings')}}" class="list-group-item"><i class="bi bi-person-square"></i>Contact Info</a>
+                <a href="{{route('cv_settings')}}" class="list-group-item"><i class="bi bi-person-square"></i>CV</a>
+                <a href="{{route('about_settings')}}" class="list-group-item"><i class="bi bi-person-square"></i>About</a>
+                <a href="{{route('home')}}" class="list-group-item"><i class="bi bi-person-square"></i>Skills</a>
              </div>
           </div>
        </div>

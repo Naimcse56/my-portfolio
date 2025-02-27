@@ -1,7 +1,4 @@
 @extends('layouts.admin')
-@push('styles')    
-  <link href="{{asset('plugins/fancy-file-uploader/fancy_fileupload.css')}}" rel="stylesheet" />
-@endpush
 @section('content')
 <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
     <div class="breadcrumb-title pe-3">Profile</div>
@@ -24,8 +21,13 @@
                <form class="row g-3" method="POST" action="{{ route('cv_update') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="col-12">
-                        <label class="form-label">CV</label>
-                        <input id="fancy-file-upload" type="file" name="files" accept=".jpg, .png, image/jpeg, image/png, .pdf">
+                        <label class="form-label">Avatar</label>
+                        <input class="form-control" id="formFile" type="file" name="files" accept=".jpg, .png, image/jpeg, image/png, .pdf">
+                    </div>
+                    <div class="col-12" id="previewSection" class="w-100 h-25">
+                        @if ($user->cv_path)
+                            <a href="{{asset($user->cv_path)}}" target="_blank" class="btn btn-sm btn-secondary w-25"><i class="bi bi-eye-fill"></i></a>
+                        @endif
                     </div>
                     <div class="col-12">
                         <div class="d-grid">
@@ -39,9 +41,5 @@
 </div>
 @endsection
 @push('scripts')
-    
-<script src="{{asset('plugins/fancy-file-uploader/jquery.ui.widget.js')}}"></script>
-<script src="{{asset('plugins/fancy-file-uploader/jquery.fileupload.js')}}"></script>
-<script src="{{asset('plugins/fancy-file-uploader/jquery.fancy-fileupload.js')}}"></script>
 <script src="{{asset('js/form-file-upload.js')}}"></script>
 @endpush

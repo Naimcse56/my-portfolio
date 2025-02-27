@@ -10,9 +10,9 @@
   <title>{{ config('app.name', 'Portolio') }}</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Maha Personal cv/resume template for professional and personal website." />
-  <meta name="keywords" content="creative, cv, designer,  online cv, online resume, powerful portfolio, professional, professional resume, responsive, resume, vcard " />
-  <meta name="developer" content="Md. Siful Islam">
+  <meta name="description" content="Naimul Islam, Experienced Laravel developer specializing in custom web applications. Expert in building Accounting Management Systems (Cash & Accrual), Multivendor E-commerce, HR & Payroll, Inventory, ERP, and SaaS solutions. Hire me for top-quality services like bug fixing, app installation, and building tailored applications to meet your business needs." />
+  <meta name="keywords" content="Laravel developer, Accounting Management System, Cash and Accrual Accounting, Multivendor Ecommerce, HR and Payroll, Inventory Management, ERP solutions, SaaS applications, web development, bug fixing, application installation, custom application development, Laravel expert, hire Laravel developer, business web solutions, software development, Laravel portfolio." />
+  <meta name="developer" content="Md. Naimul Islam">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
   <!-- FAV AND ICONS   -->

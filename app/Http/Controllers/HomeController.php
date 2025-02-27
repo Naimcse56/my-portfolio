@@ -91,7 +91,15 @@ class HomeController extends Controller
         $request->validate([
             'files' => 'required',
         ]);
-
+        $avatar = null;
+        foreach($request->files as $k => $file)
+        {
+            $file = $file;
+            $name = $user->name.'.'.$file->getClientOriginalExtension();
+            $file->move(public_path() . '/avatar', $name);
+            $avatar = '/avatar/' . $name;
+        }
+        
         $user->avatar = $avatar;
         $user->save();
         
@@ -101,6 +109,7 @@ class HomeController extends Controller
     public function contact_update(Request $request)
     {
         auth()->user()->update([
+            'name' => $request->name,
             'phone' => $request->phone,
             'whatsapp_phone' => $request->whatsapp_phone,
             'facebook' => $request->facebook,
@@ -118,6 +127,14 @@ class HomeController extends Controller
         $request->validate([
             'files' => 'required',
         ]);
+        $avatar = null;
+        foreach($request->files as $k => $file)
+        {
+            $file = $file;
+            $name = $user->name.'.'.$file->getClientOriginalExtension();
+            $file->move(public_path() . '/cv', $name);
+            $cv_path = '/cv/' . $name;
+        }
 
         $user->cv_path = $cv_path;
         $user->save();
