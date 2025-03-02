@@ -14,10 +14,7 @@
                                 </div>
                                 <div class="each-info">
                                     <h4>Address</h4>
-                                    <address>
-                                        5th Avenue, 34th floor, <br> 
-                                         New york
-                                    </address>
+                                    <address>{{ $user->address }}</address>
                                 </div>
                             </div>
                         </div>
@@ -28,8 +25,8 @@
                                 </div>
                                 <div class="each-info">
                                     <h4>Email</h4>
-                                    <a href="mailto:yourmail@email.com">yourmail@email.com</a><br>
-                                    <a href="mailto:yourmail@email.com">yourmail@email.com</a>
+                                    <a href="mailto:yourmail@email.com">{{ $user->email }}</a><br>
+                                    <a href="mailto:yourmail@email.com">{{ $user->email }}</a>
                                 </div>
                             </div>
                         </div>
@@ -40,8 +37,8 @@
                                 </div>
                                 <div class="each-info">
                                     <h4>Phone</h4>
-                                    <a href="callto:(880)-8976-987">(880)-8976-987</a><br>
-                                    <a href="callto:(880)-8976-987">(880)-8976-987</a>
+                                    <a href="callto:{{ $user->phone }}">{{ $user->phone }}</a><br>
+                                    <a href="https://wa.me/+88{{ $user->phone }}" target="_blank">{{ $user->phone }}</a>
                                 </div>
                             </div>
                         </div>

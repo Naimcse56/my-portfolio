@@ -11,13 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('services', function (Blueprint $table) {
+        Schema::create('education', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->nullable();
-            $table->string('name')->nullable();
-            $table->mediumText('short_details')->nullable();
-            $table->string('icon')->default('fa fa-desktop');
-            $table->boolean('is_active')->default(1);
+            $table->string('title', 200)->nullable();
+            $table->string('department', 200)->nullable();
+            $table->string('institute_name', 200)->nullable();
+            $table->string('board', 200)->nullable();
+            $table->string('result', 125)->nullable();
+            $table->unsignedBigInteger('passing_year')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('services');
+        Schema::dropIfExists('education');
     }
 };

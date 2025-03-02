@@ -22,7 +22,7 @@ class HomeController extends Controller
      */
     public function main_home()
     {
-        $data['user'] = User::first();
+        $data['user'] = User::with(['skills','services'])->first();
         return view('home', $data);
     }
 

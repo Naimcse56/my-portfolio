@@ -12,13 +12,11 @@
                     <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">{{ $user->about_self }}</p>
                     <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                         <ul>
-                            <li><span>php</span></li>
-                            <li><span>html</span></li>
-                            <li><span>css</span></li>
-                            <li><span>php</span></li>
-                            <li><span>wordpress</span></li>
-                            <li><span>React</span></li>
-                            <li><span>Javascript</span></li>
+                            @forelse ($user->skills->where('is_focusable',1) as $skill)
+                                <li><span>{{$skill->name}}</span></li>
+                            @empty
+                                <li><span>Not Added Yet</span></li>
+                            @endforelse
                         </ul>
                     </div>
                     <a href="{{asset($user->cv_path)}}" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s" target="_blank">Downlaod CV <i class="fa fa-download"></i></a>
@@ -34,39 +32,22 @@
             <div class="col-sm-12 text-center section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
                 <h3>What I do</h3>
             </div>
-            <div class="col-sm-4">
-                <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                    <i class="fa fa-bullseye purple-color"></i>
-                    <h3>UI Design</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                        magna aliquam erat volutpat.
-                    </p>
+            @forelse ($user->services->where('is_active',1) as $service)
+                <div class="col-sm-4">
+                    <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                        <i class="{{$service->icon ? $service->icon : 'fa fa-desktop'}}"></i>
+                        <h3>{{$service->name}}</h3>
+                        <p>{{$service->short_details}}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                    <i class="fa fa-code iron-color"></i>
-                    <h3>Web Development</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                        magna aliquam erat volutpat.
-                    </p>
+            @empty
+                <div class="col-sm-4">
+                    <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
+                        <i class="fa fa-desktop"></i>
+                        <h3>Not Added Yet</h3>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                    <i class="fa fa-object-ungroup sky-color"></i>
-                    <h3>App Development</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                        magna aliquam erat volutpat.
-                    </p>
-                </div>
-            </div>
+            @endforelse
         </div>
     </div>
 </section>

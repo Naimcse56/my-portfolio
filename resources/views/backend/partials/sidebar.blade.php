@@ -40,6 +40,7 @@
                 <a href="{{route('about_settings')}}" class="list-group-item"><i class="bi bi-person-square"></i>About</a>
                 <a href="{{route('skills.index')}}" class="list-group-item"><i class="bi bi-person-square"></i>Skills</a>
                 <a href="{{route('services.index')}}" class="list-group-item @if (Route::is('services.*')) active @endif"><i class="bi bi-person-square"></i>Services</a>
+                <a href="{{route('education.index')}}" class="list-group-item @if (Route::is('education.*')) active @endif"><i class="bi bi-person-square"></i>Academic Qualification</a>
              </div>
           </div>
        </div>
