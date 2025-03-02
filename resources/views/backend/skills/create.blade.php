@@ -29,7 +29,7 @@
                         </select>
                     </div>
                     <div class="col-12">
-                        <label class="form-label">Your Name</label>
+                        <label class="form-label">Skill Name</label>
                         <input class="form-control" type="text" id="name" name="name" value="" required>
                     </div>
                     <div class="col-12">

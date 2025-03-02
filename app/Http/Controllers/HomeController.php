@@ -95,7 +95,7 @@ class HomeController extends Controller
         foreach($request->files as $k => $file)
         {
             $file = $file;
-            $name = $user->name.'.'.$file->getClientOriginalExtension();
+            $name = str_replace(' ','_',$user->name).'.'.$file->getClientOriginalExtension();
             $file->move(public_path() . '/avatar', $name);
             $avatar = '/avatar/' . $name;
         }

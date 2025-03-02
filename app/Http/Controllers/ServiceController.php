@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Skill;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
-class SkillController extends Controller
+class ServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,19 +14,22 @@ class SkillController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $row = Skill::orderBy('name', 'asc');
+            $row = Service::orderBy('name', 'asc');
             return Datatables::of($row)
                     ->addIndexColumn()
-                    ->addColumn('is_focusable', function($row){
-                        return view('backend.skills.component.is_focusable', compact('row'));
+                    ->addColumn('short_details', function($row){
+                        return substr($row->short_details, 0, 90).' ...';
+                    })
+                    ->addColumn('icon', function($row){
+                        return $row->icon;
                     })
                     ->addColumn('action', function($row){
-                        return view('backend.skills.component.action', compact('row'));
+                        return view('backend.services.component.action', compact('row'));
                     })
-                    ->rawColumns(['is_focusable','action'])
+                    ->rawColumns(['icon','action'])
                     ->make(true);
         }
-        return view('backend.skills.index');
+        return view('backend.services.index');
     }
 
     /**
@@ -34,7 +37,7 @@ class SkillController extends Controller
      */
     public function create()
     {
-        return view('backend.skills.create');
+        return view('backend.services.create');
     }
 
     /**
@@ -44,25 +47,15 @@ class SkillController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'type' => 'required|in:Technical,Professional',
         ]);
-        Skill::create([
+        Service::create([
             'user_id' => auth()->user()->id,
             'name' => $request->name,
-            'type' => $request->type,
-            'percentage' => $request->percentage,
-            'is_focusable' => $request->is_focusable ? 1 : 0,
+            'short_details' => $request->short_details,
+            'icon' => $request->icon,
         ]);
         
         return back()->with('success', 'Added successfully.');
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Skill $skill)
-    {
-        //
     }
 
     /**
@@ -70,8 +63,8 @@ class SkillController extends Controller
      */
     public function edit($id)
     {
-        $data['skill'] = Skill::find($id);
-        return view('backend.skills.edit', $data);
+        $data['service'] = Service::find($id);
+        return view('backend.services.edit', $data);
     }
 
     /**
@@ -82,16 +75,14 @@ class SkillController extends Controller
         try {
             $request->validate([
                 'name' => 'required',
-                'type' => 'required|in:Technical,Professional',
             ]);
-            Skill::find($id)->update([
+            Service::find($id)->update([
                                 'name' => $request->name,
-                                'type' => $request->type,
-                                'percentage' => $request->percentage,
-                                'is_focusable' => $request->is_focusable ? 1 : 0,
+                                'short_details' => $request->short_details,
+                                'icon' => $request->icon,
                             ]);
             
-            return redirect()->route('skills.index')->with('success', 'Updated successfully.');
+            return redirect()->route('services.index')->with('success', 'Updated successfully.');
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()]);
         }
@@ -103,7 +94,7 @@ class SkillController extends Controller
     public function destroy(Request $request)
     {
         try {
-            $response = Skill::find($request->id)->delete();
+            $response = Service::find($request->id)->delete();
             return response()->json(['success' => true]);
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()]);

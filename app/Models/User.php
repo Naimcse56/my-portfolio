@@ -43,4 +43,14 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function skills()
+    {
+        return $this->hasMany(Skill::Class);
+    }
+
+    public function services()
+    {
+        return $this->hasMany(Service::Class);
+    }
 }

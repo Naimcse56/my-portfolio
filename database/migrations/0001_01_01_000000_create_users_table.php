@@ -55,7 +55,7 @@ return new class extends Migration
             'email' => "naimcse56@gmail.com",
             'phone' => "+8801873868060",
             'about_self' => "I’m a Laravel Developer since 2019 with expertise in building scalable, high-performance web applications. I specialize in working with PostgreSQL, MySQL, and Vue.js for frontend development, and have experience managing both shared and VPS servers. Over the years, I’ve built multi-database applications, including custom accounting systems, tailored to meet specific business needs. I’m passionate about creating innovative, seamless digital experiences that drive results and help businesses grow. Whether you need a custom application or a complete digital transformation, I’m here to bring your ideas to life with top-notch development solutions. Let’s collaborate!",
-            'password' => Hash::make("cse56@com"),
+            'password' => Hash::make("naimcse56@gmail.com"),
             'avatar' => "/avatar/Md Naimul Islam.jpg"
         ]);
     }

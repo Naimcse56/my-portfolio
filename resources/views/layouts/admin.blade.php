@@ -63,6 +63,7 @@
     @stack('scripts')
     @include('backend.partials.session_message')
     <script>
+      var csrfToken = $('meta[name="csrf-token"]').attr('content');
       const deleteData = function(title, route, id) {
       Swal.fire({
         title: "Are you sure?",
@@ -78,7 +79,7 @@
             type: 'POST',
             url: route,
             data: {
-              _token: APP_TOKEN,
+              _token: csrfToken,
               id: id,
             },
             success: function(response) {
