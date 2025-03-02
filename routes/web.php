@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\EducationController;
+use App\Http\Controllers\ExperienceController;
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'main_home')->name('main_home');
@@ -43,6 +44,14 @@ Route::group(['prefix' => 'admin','middleware' => ['auth']], function () {
         Route::post('/status-update', 'status_update')->name('status_update');
     });
     Route::controller(EducationController::class)->prefix('academic-qualifications')->as('education.')->group(function () {
+        Route::get('/list', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
+        Route::post('/store', 'store')->name('store');
+        Route::get('/edit/{id}', 'edit')->name('edit');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::post('/delete', 'destroy')->name('delete');
+    });
+    Route::controller(ExperienceController::class)->prefix('experiences')->as('experiences.')->group(function () {
         Route::get('/list', 'index')->name('index');
         Route::get('/create', 'create')->name('create');
         Route::post('/store', 'store')->name('store');

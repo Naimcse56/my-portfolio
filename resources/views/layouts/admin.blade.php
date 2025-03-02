@@ -7,7 +7,7 @@
 
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>{{ config('app.name', 'Portolio') }}</title>
+  <title> @yield('title', 'Dashboard') | {{ config('app.name', 'Portolio') }}</title>
 
   <link rel="icon" href="{{asset('images/favicon-32x32.png')}}" type="image/png" />
   <!--plugins-->

@@ -7,26 +7,19 @@
                          <h3 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Education</h3>
                         <div class="mh-education-deatils">
                             <!-- Education Institutes-->
-                            <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                                <h4>Art & Multimedia From <a href="#">Oxford University</a></h4>
-                                <div class="mh-eduyear">2005-2008</div>
-                                <p>It is a long established fact that a reader will be distracted by the readable content of a 
-                                page when looking at its layout. The point of using  Lorem Ipsum </p>
-                            </div>                                
-                            <!-- Education Institutes-->
-                            <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                                <h4>Art & Multimedia From <a href="#">Oxford University</a></h4>
-                                <div class="mh-eduyear">2005-2008</div>
-                                <p>It is a long established fact that a reader will be distracted by the readable content of a 
-                                page when looking at its layout. The point of using  Lorem Ipsum </p>
-                            </div>                                
-                            <!-- Education Institutes-->
-                            <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
-                                <h4>Art & Multimedia From <a href="#">Oxford University</a></h4>
-                                <div class="mh-eduyear">2005-2008</div>
-                                <p>It is a long established fact that a reader will be distracted by the readable content of a 
-                                page when looking at its layout. The point of using L orem Ipsum </p>
-                            </div>
+                            @forelse ($user->educations as $education)
+                                <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                                    <h4 class="educationyear">{{$education->title}}</h4>
+                                    <h6>{{$education->department}}</h6>
+                                    <h6 class="educationyear">{{$education->institute_name}}</h6>
+                                    <h6>Passing Year : {{$education->passing_year}}</h6>
+                                    <h6 class="educationyear">Board : {{$education->board}}</h6>
+                                </div>
+                            @empty
+                                <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                                    <h4 class="educationyear">No Information Available</h4>
+                                </div>
+                            @endforelse
                         </div>
                     </div>
                 </div>
@@ -34,36 +27,20 @@
                     <div class="mh-work">
                          <h3>Work Experience</h3>
                         <div class="mh-experience-deatils">
-                            <!-- Education Institutes-->
-                            <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                                <h4>UI/UX Designer <a href="#">IronSketch</a></h4>
-                                <div class="mh-eduyear">2005-2008</div>
-                                <span>Responsibility :</span>
-                                <ul class="work-responsibility">
-                                    <li><i class="fa fa-circle"></i>Validate CSS</li>
-                                    <li><i class="fa fa-circle"></i>Project Management</li>
-                                </ul>
-                            </div>                                
-                            <!-- Education Institutes-->
-                            <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
-                                <h4>Art & Multimedia From <a href="#">Oxford University</a></h4>
-                                <div class="mh-eduyear">2005-2008</div>
-                                <span>Responsibility :</span>
-                                <ul class="work-responsibility">
-                                    <li><i class="fa fa-circle"></i>Validate CSS</li>
-                                    <li><i class="fa fa-circle"></i>Project Management</li>
-                                </ul>
-                            </div>                                
-                            <!-- Education Institutes-->
-                            <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                                <h4>Art & Multimedia From <a href="#">Oxford University</a></h4>
-                                <div class="mh-eduyear">2005-2008</div>
-                                <span>Responsibility :</span>
-                                <ul class="work-responsibility">
-                                    <li><i class="fa fa-circle"></i>Validate CSS</li>
-                                    <li><i class="fa fa-circle"></i>Project Management</li>
-                                </ul>
-                            </div>
+                            @forelse ($user->experiences as $experience)
+                                <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                                    <h4 class="educationyear">{{$experience->designation}}</h4>
+                                    <h6>{{$experience->company_name}}</h6>
+                                    <h6 class="educationyear">{{$experience->company_address}}</h6>
+                                    <h6 class="educationyear">{{date('d M, Y', strtotime($experience->start_date))}}</h6>
+                                    <h6 class="educationyear">{{$experience->currently_working ? date('d M, Y', strtotime($experience->end_date)) : "Currently Working"}}</h6>
+                                    <h6>{{$experience->responsibility}}</h6>
+                                </div>
+                            @empty
+                                <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                                    <h4 class="educationyear">No Information Available</h4>
+                                </div>
+                            @endforelse
                         </div>
                     </div>
                 </div>

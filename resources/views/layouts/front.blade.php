@@ -7,7 +7,7 @@
 
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>{{ config('app.name', 'Portolio') }}</title>
+  <title> @yield('title', 'Home') | {{ $user->name }}</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Naimul Islam, Experienced Laravel developer specializing in custom web applications. Expert in building Accounting Management Systems (Cash & Accrual), Multivendor E-commerce, HR & Payroll, Inventory, ERP, and SaaS solutions. Hire me for top-quality services like bug fixing, app installation, and building tailored applications to meet your business needs." />
