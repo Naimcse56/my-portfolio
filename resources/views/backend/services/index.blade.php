@@ -27,6 +27,7 @@
                                 <th>Service</th>
                                 <th>Details</th>
                                 <th>Icon</th>
+                                <th>Is Active</th>
                                 <th width="7%">Action</th>
                             </tr>
                         </thead>
@@ -54,6 +55,7 @@
 						{data: 'name', name: 'name'},
 						{data: 'short_details', name: 'short_details'},
 						{data: 'icon', name: 'icon'},
+						{data: 'is_active', name: 'is_active'},
 						{data: 'action', name: 'action', orderable: false, searchable: false, printable:false},
 					],
                     responsive: false,
@@ -61,6 +63,25 @@
                 } );
                 $.fn.dataTable.ext.errMode = () => alert('Error while loading the table data. Please refresh');
             });
+
+            $(document).on('change','.is_active', function(){
+                if (this.checked) {
+                    var is_active = 1;
+                } else {
+                    var is_active = 0;
+                }
+                $.post('{{ route('services.status_update') }}', {
+                    _token: '{{ csrf_token() }}',
+                    id: this.value,
+                    is_active: is_active
+                }, function(data) {
+                    if (data.success) {
+                        toastr.success(data.success);
+                    } else {
+                        toastr.error(data.error);
+                    }
+                });
+            })
         })(jQuery);
     </script>
 @endpush

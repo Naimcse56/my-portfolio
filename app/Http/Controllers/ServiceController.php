@@ -23,10 +23,13 @@ class ServiceController extends Controller
                     ->addColumn('icon', function($row){
                         return $row->icon;
                     })
+                    ->addColumn('is_active', function($row){
+                        return view('backend.services.component.is_active', compact('row'));
+                    })
                     ->addColumn('action', function($row){
                         return view('backend.services.component.action', compact('row'));
                     })
-                    ->rawColumns(['icon','action'])
+                    ->rawColumns(['icon','action','is_active'])
                     ->make(true);
         }
         return view('backend.services.index');
@@ -53,6 +56,7 @@ class ServiceController extends Controller
             'name' => $request->name,
             'short_details' => $request->short_details,
             'icon' => $request->icon,
+            'is_active' => 1
         ]);
         
         return back()->with('success', 'Added successfully.');
@@ -98,6 +102,22 @@ class ServiceController extends Controller
             return response()->json(['success' => true]);
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()]);
+        }
+    }
+
+    public function status_update(Request $request)
+    {
+        try {
+            Service::find($request->id)->update([
+                'is_active' => $request->is_active,
+            ]);
+            return response()->json([
+                'success' => 'Updated successfully.'
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'error' => $e->getMessage()
+            ]);
         }
     }
 }

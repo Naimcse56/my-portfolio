@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->mediumText('short_details')->nullable();
             $table->string('icon')->nullable();
-            $table->boolean('is_active')->nullable();
+            $table->boolean('is_active')->default(1);
             $table->timestamps();
         });
     }

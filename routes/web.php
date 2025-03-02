@@ -39,5 +39,6 @@ Route::group(['prefix' => 'admin','middleware' => ['auth']], function () {
         Route::get('/edit/{id}', 'edit')->name('edit');
         Route::post('/update/{id}', 'update')->name('update');
         Route::post('/delete', 'destroy')->name('delete');
+        Route::post('/status-update', 'status_update')->name('status_update');
     });
 });
