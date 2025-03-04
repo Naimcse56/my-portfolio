@@ -27,11 +27,12 @@
   <!-- loader-->
 	<link href="{{asset('css/pace.min.css')}}" rel="stylesheet" />
 
-
   <!--Theme Styles-->
   <link href="{{asset('css/dark-theme.css')}}" rel="stylesheet" />
   <link href="{{asset('css/header-colors.css')}}" rel="stylesheet" />
   <link href="{{asset('css/toastr.min.css')}}" rel="stylesheet" type="text/css" />
+  {{-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> --}}
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.css" rel="stylesheet">
   @stack('styles')
 </head>
 
@@ -56,6 +57,8 @@
     <script src="{{asset('/plugins/datatable/js/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('/plugins/datatable/js/dataTables.bootstrap5.min.js')}}"></script>
     <script src="{{asset('/js/table-datatable.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.js"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.js"></script> --}}
     <!--app-->
     <script src="{{asset('js/app.js')}}"></script>
     <script src="{{asset('js/toastr.min.js')}}"></script>

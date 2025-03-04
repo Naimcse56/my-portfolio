@@ -7,6 +7,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\SubscriberController;
+use App\Http\Controllers\BlogController;
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'main_home')->name('main_home');
@@ -66,5 +67,15 @@ Route::group(['prefix' => 'admin','middleware' => ['auth']], function () {
     });
     Route::controller(SubscriberController::class)->prefix('subscribers')->as('subscribers.')->group(function () {
         Route::get('/list', 'index')->name('index');
+    });
+    Route::controller(BlogController::class)->prefix('blogs')->as('blogs.')->group(function () {
+        Route::get('/list', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
+        Route::post('/store', 'store')->name('store');
+        Route::get('/edit/{id}', 'edit')->name('edit');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::post('/delete', 'destroy')->name('delete');
+        Route::post('/publish-update', 'publish_status_update')->name('publish_status_update');
+        Route::post('/featured-update', 'featured_status_update')->name('featured_status_update');
     });
 });

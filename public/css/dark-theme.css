@@ -757,7 +757,9 @@ html.dark-theme .bg-body {
     }
 
 }
-
+textarea.form-control {
+    min-height: calc(1.5em + 11.75rem + 2px);
+}
 
 
 

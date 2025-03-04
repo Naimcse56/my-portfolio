@@ -1,12 +1,4 @@
 @extends('layouts.admin')
-@push('styles')
-    <style>
-        textarea.form-control {
-            min-height: calc(1.5em + 11.75rem + 2px);
-        }
-    </style>
-@endpush
-
 @section('content')
 <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
     <div class="breadcrumb-title pe-3">Personal Information</div>
