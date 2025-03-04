@@ -19,7 +19,7 @@
     <div class="col-xl-12">
         <div class="card">
             <div class="card-body">            
-                <div class="table-responsive">
+                {{-- <div class="table-responsive"> --}}
                     <table id="example" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
@@ -35,7 +35,7 @@
                             
                         </tbody>
                     </table>
-                </div>
+                {{-- </div> --}}
             </div>
         </div>
     </div>

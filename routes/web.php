@@ -6,9 +6,14 @@ use App\Http\Controllers\SkillController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\SubscriberController;
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'main_home')->name('main_home');
+});
+
+Route::controller(SubscriberController::class)->group(function () {
+    Route::get('/subscribe-now', 'subscribe_now')->name('email.subscribe_now');
 });
 Auth::routes();
 
@@ -58,5 +63,8 @@ Route::group(['prefix' => 'admin','middleware' => ['auth']], function () {
         Route::get('/edit/{id}', 'edit')->name('edit');
         Route::post('/update/{id}', 'update')->name('update');
         Route::post('/delete', 'destroy')->name('delete');
+    });
+    Route::controller(SubscriberController::class)->prefix('subscribers')->as('subscribers.')->group(function () {
+        Route::get('/list', 'index')->name('index');
     });
 });

@@ -44,48 +44,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                    <form id="contactForm" class="single-form quate-form wow fadeInUp" data-toggle="validator">
-                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-12">
-                                <input name="name" class="contact-name form-control" id="name" type="text" placeholder="First Name" required>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <input name="name" class="contact-email form-control" id="L_name" type="text" placeholder="Last Name" required>
-                            </div>
-                            <div class="col-sm-12">
-                                <input name="name" class="contact-subject form-control" id="email" type="email" placeholder="Your Email" required>
-                            </div>
-                            <div class="col-sm-12">
-                                <textarea class="contact-message" id="message" rows="6" placeholder="Your Message" required></textarea>
-                            </div>
-                            <!-- Subject Button -->
-                            <div class="btn-form col-sm-12">
-                                <button type="submit" class="btn btn-fill btn-block" id="form-submit">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-sm-12 col-md-6 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                    <div class="mh-map">
-                        <div id="mh-map" class="shadow-1"></div>
-                    </div>
-                </div>
                 <div class="col-sm-12 mh-copyright wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-md-4">
                             <div class="text-left text-xs-center">
-                                <p>All right reserved Siful Islam @ 2018</p>
+                                <p>All right reserved Naimul Islam @ {{date('Y')}}</p>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-md-4 text-center">
                             <ul class="social-icon">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-github"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="{{ $user->facebook }}"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="{{ $user->whatsapp_phone }}"><i class="fa fa-whatsapp"></i></a></li>
+                                <li><a href="{{ $user->github }}"><i class="fa fa-github"></i></a></li>
+                                <li><a href="{{ $user->linkd_in }}"><i class="fa fa-linkedin"></i></a></li>
                             </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <form id="contactForm" action="{{route('email.subscribe_now')}}" class="single-form quate-form wow fadeInUp">
+                                @csrf
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <input name="email" class="contact-subject form-control" id="email" type="email" placeholder="Your Email" required>
+                                    </div>
+                                    <!-- Subject Button -->
+                                    <div class="btn-form col-sm-12">
+                                        <button type="submit" class="btn btn-fill" id="form-submit">Subscribe Now</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

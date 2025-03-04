@@ -56,8 +56,6 @@
     <script src="{{asset('frontend/assets/plugins/js/bootstrap.min.js')}}"></script>
     <!-- owl carousel -->
     <script src="{{asset('frontend/assets/plugins/js/owl.carousel.js')}}"></script>
-    <!-- validator -->
-    <script src="{{asset('frontend/assets/plugins/js/validator.min.js')}}"></script>
     <!-- wow -->
     <script src="{{asset('frontend/assets/plugins/js/wow.min.js')}}"></script>
     <!-- mixin js-->
@@ -70,7 +68,6 @@
     <script src="{{asset('frontend/assets/plugins/js/jquery.fancybox.min.js')}}"></script>
     <!-- isotope js-->
     <script src="{{asset('frontend/assets/plugins/js/isotope.pkgd.js')}}"></script>
-    <script src="{{asset('frontend/assets/plugins/js/packery-mode.pkgd.js')}}"></script>
     <script src="{{asset('frontend/assets/js/custom-scripts.js')}}"></script>
     <script src="{{asset('js/toastr.min.js')}}"></script>
     @stack('scripts')

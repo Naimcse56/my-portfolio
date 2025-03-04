@@ -8,7 +8,10 @@
              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-dashboards" type="button"><i class="bi bi-house-door-fill"></i></button>
           </li>
           <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Personal Information">
-             <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-application" type="button"><i class="bi bi-grid-fill"></i></button>
+             <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-application" type="button"><i class="bi bi-person-square"></i></button>
+          </li>
+          <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Subscribers">
+             <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-subscribers" type="button"><i class="bi bi-suit-heart"></i></button>
           </li>
        </ul>
     </div>
@@ -43,6 +46,16 @@
                 <a href="{{route('education.index')}}" class="list-group-item @if (Route::is('education.*')) active @endif"><i class="bi bi-person-square"></i>Academic Qua.</a>
                 <a href="{{route('experiences.index')}}" class="list-group-item @if (Route::is('experiences.*')) active @endif"><i class="bi bi-person-square"></i>Experiences</a>
              </div>
+          </div>
+       </div>
+       <div class="tab-pane fade" id="pills-subscribers">
+          <div class="list-group list-group-flush">
+             <div class="list-group-item">
+                <div class="d-flex w-100 justify-content-between">
+                   <h5 class="mb-0">Subscribers</h5>
+                </div>
+             </div>
+             <a href="{{route('subscribers.index')}}" class="list-group-item"><i class="bi bi-suit-heart"></i>Subscribers</a>
           </div>
        </div>
     </div>
